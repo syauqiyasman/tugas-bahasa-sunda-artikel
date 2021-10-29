@@ -17,26 +17,28 @@ const Home: NextPage = () => {
 
   const result = input.split(/[ |]+/).join(' | ')
 
-  const duplicates = (arr: any) => {
-    let sorted_arr = arr.slice().sort()
-
-    let results = [];
-    for (let i = 0; i < sorted_arr.length - 1; i++) {
-      if (sorted_arr[i + 1].toLowerCase() == sorted_arr[i].toLowerCase()) {
-        results.push(sorted_arr[i])
-      }
-    }
-    return results;
-  }
-
-  const duplicate = duplicates(input.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/))
-  const duplicateResults = duplicate.join(', ')
-
   const distinct = (value: any, index: any, self: any) => {
     return self.indexOf(value) === index
   }
 
   const kamusResult = input.toLowerCase().split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/).sort().filter(distinct).join('\n')
+
+  const duplicates = (arr: any) => {
+    let array = arr
+    let results: any = [];
+    for (let i = 0; i < array.length; i++) {
+      if (results.includes(array[i].toLowerCase())) {
+        results.push(array[i].toLowerCase().strike())
+      } else {
+        results.push(array[i].toLowerCase())
+      }
+    }
+
+    return results;
+  }
+
+  const duplicate = duplicates(input.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/))
+  const duplicateResults = duplicate.join(' | ')
 
   return (
     <>
@@ -57,6 +59,7 @@ const Home: NextPage = () => {
             >
             </textarea>
           </div>
+
           <div className="uJando">
             <label htmlFor="result">Hasil</label>
             <textarea
@@ -69,17 +72,11 @@ const Home: NextPage = () => {
             </textarea>
           </div>
 
-          <div className="uJando">
-            <label htmlFor="duplicateResults">Kata yang duplikat</label>
-            <textarea
-              name="duplicateResults"
-              id="duplicateResults"
-              className="sjd8Im"
-              value={duplicateResults}
-              readOnly
-            >
-            </textarea>
+          <label>Kata yang duplikat</label>
+          <div className="uJando Kpas9d">
+            <code dangerouslySetInnerHTML={{ __html: duplicateResults }} />
           </div>
+
           <div className="uJando">
             <label htmlFor="kamus">Kata untuk kamus</label>
             <textarea

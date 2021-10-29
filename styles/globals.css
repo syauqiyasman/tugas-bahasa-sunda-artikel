@@ -46,3 +46,12 @@ a {
   padding: 0.5rem;
   resize: none;
 }
+
+/* Border */
+.Kpas9d {
+  border-style: solid;
+  border-width: 1px;
+  padding: 0.5rem;
+  font-size: 0.87rem;
+  min-height: 20rem;
+}
