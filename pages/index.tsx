@@ -32,6 +32,12 @@ const Home: NextPage = () => {
   const duplicate = duplicates(input.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/))
   const duplicateResults = duplicate.join(', ')
 
+  const distinct = (value: any, index: any, self: any) => {
+    return self.indexOf(value) === index
+  }
+
+  const kamusResult = input.toLowerCase().split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/).sort().filter(distinct).join('\n')
+
   return (
     <>
       <Head>
@@ -70,6 +76,17 @@ const Home: NextPage = () => {
               id="duplicateResults"
               className="sjd8Im"
               value={duplicateResults}
+              readOnly
+            >
+            </textarea>
+          </div>
+          <div className="uJando">
+            <label htmlFor="kamus">Kata untuk kamus</label>
+            <textarea
+              name="kamus"
+              id="kamus"
+              className="sjd8Im"
+              value={kamusResult}
               readOnly
             >
             </textarea>
