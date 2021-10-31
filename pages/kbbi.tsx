@@ -16,6 +16,8 @@ export default function KbbiPage({ data, error }: { data: any, error: any }) {
         phrase = false
     }
 
+    error ? console.log("Server error") : null
+
     const [word, setWord] = useState({
         input: ""
     })
@@ -25,12 +27,6 @@ export default function KbbiPage({ data, error }: { data: any, error: any }) {
     const handleChange = (e: any) => {
         setWord({ ...word, [e.target.name]: e.target.value })
     }
-
-    const distinct = (value: any, index: any, self: any) => {
-        return self.indexOf(value) === index
-    }
-
-    const result = input.toLowerCase().split(/[ .:;?!~,`"&|()<>{}\[\]\r\n/\\]+/).sort().filter(distinct)
 
     const router = useRouter()
 
