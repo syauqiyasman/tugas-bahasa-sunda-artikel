@@ -105,3 +105,16 @@ a {
   margin: 0;
   text-decoration: underline;
 }
+
+#nprogress .bar {
+  background: #F3F4F6 !important;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 0.625rem #F3F4F6, 0 0 0.3125rem #F3F4F6 !important;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #F3F4F6 !important;
+  border-left-color: #F3F4F6 !important;
+}
