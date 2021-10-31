@@ -16,8 +16,6 @@ export default function KbbiPage({ data, error }: { data: any, error: any }) {
         phrase = false
     }
 
-    error ? console.log("Server error") : null
-
     const [word, setWord] = useState({
         input: ""
     })
