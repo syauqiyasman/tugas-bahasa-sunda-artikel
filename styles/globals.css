@@ -17,8 +17,6 @@ a {
 
 .Ud9sjd {
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
 }
 
 .Jasdj8 {
@@ -27,17 +25,14 @@ a {
 }
 
 .uasKa8 {
-  width: 768px;
+  max-width: 768px;
   padding: 0rem 1rem 0 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .uJando {
   margin-bottom: 2rem;
-}
-
-/* Label */
-.Ukasj9 {
-  margin-bottom: 10rem;
 }
 
 .sjd8Im {
@@ -54,4 +49,59 @@ a {
   padding: 0.5rem;
   font-size: 0.87rem;
   min-height: 20rem;
+}
+
+/* Nav */
+.Tdazu1 {
+  background: #7C3AED;
+}
+
+.Tdazu2 {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.Tdazu3 {
+  margin-left: 1rem;
+  color: #E5E7EB;
+}
+
+/* Input kbbi */
+.Ysbaa0 {
+  width: 100%;
+  padding: 0.5rem;
+  resize: none;
+}
+
+.aoKADn {
+  display: flex;
+}
+
+.kasnd8 {
+  background: #7C3AED;
+  outline: none;
+  border: none;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  color: #E5E7EB;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.kasnd8:hover {
+  background: #6D28D9;
+}
+
+/* Footer */
+.foiaj3 {
+  background: #F3F4F6;
+  padding: 2rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.foiaj3 a{
+  margin: 0;
+  text-decoration: underline;
 }

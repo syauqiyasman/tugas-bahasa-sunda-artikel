@@ -1,6 +1,8 @@
 import { useState } from "react"
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from "next/link"
+import Nav from "../components/nav"
 
 const Home: NextPage = () => {
 
@@ -45,8 +47,16 @@ const Home: NextPage = () => {
       <Head>
         <title>Bantuan Tugas Bahasa Sunda</title>
       </Head>
-      <p className="Jasdj8">Bahasa Sunda Artikel</p>
       <div className="Ud9sjd">
+        <Nav />
+        <div style={{ maxWidth: "768px", margin: "1rem auto 0 auto", padding: "1rem" }}>
+          <Link href="/kbbi">
+            <a>
+              New update KBBI!
+            </a>
+          </Link>
+        </div>
+        <p className="Jasdj8">Bahasa Sunda Artikel</p>
         <div className="uasKa8">
           <div className="uJando">
             <label htmlFor="input">Paste text</label>
