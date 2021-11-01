@@ -118,3 +118,22 @@ a {
   border-top-color: #F3F4F6 !important;
   border-left-color: #F3F4F6 !important;
 }
+
+/* Kbbi cta */
+.olkjd8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Kjkas7 {
+  background: #7C3AED;
+  border-radius: 0.25rem;
+  margin-left: 0.5rem;
+  color: #E5E7EB;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.Kjkas7:hover {
+  background: #6D28D9;
+}

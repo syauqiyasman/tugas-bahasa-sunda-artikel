@@ -49,12 +49,19 @@ const Home: NextPage = () => {
       </Head>
       <div className="Ud9sjd">
         <Nav />
-        <div style={{ maxWidth: "768px", margin: "1rem auto 0 auto", padding: "1rem" }}>
-          <Link href="/kbbi">
-            <a>
-              New update KBBI!
-            </a>
-          </Link>
+        <div style={{ maxWidth: "768px", margin: "0rem auto 0 auto", padding: "1rem" }}>
+          <div className="olkjd8">
+            <Link href="/kbbi">
+              <a>
+                New update KBBI!
+              </a>
+            </Link>
+            <Link href="/kbbi">
+              <a className="Kjkas7">
+                Coba KBBI
+              </a>
+            </Link>
+          </div>
         </div>
         <p className="Jasdj8">Bahasa Sunda Artikel</p>
         <div className="uasKa8">
