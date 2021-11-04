@@ -97,16 +97,22 @@ export default function KbbiPage({ data, error }: { data: any, error: any }) {
 export async function getServerSideProps({ query }: { query: any }) {
     let data, error
 
-    try {
-        const res = await fetch(`https://kateglo.com/api.php?format=json&phrase=${query.search}`)
-        data = await res.json()
-        error = false
-    } catch (err) {
-        data = []
-        error = true
+    if (query.search) {
+        try {
+            const res = await fetch(`https://kateglo.com/api.php?format=json&phrase=${query.search}`)
+            data = await res.json()
+            error = false
+        } catch (err) {
+            data = []
+            error = true
+        }
+
+        return {
+            props: { data, error }
+        }
     }
 
     return {
-        props: { data, error }
+        props: {}
     }
 }
